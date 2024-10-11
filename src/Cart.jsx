@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import Modal from 'react-modal';
 import ClientModal from './ClientModal';
 import axios from 'axios';
+import { FaTrash } from 'react-icons/fa';
 import './Cart.css';
 import { toast } from 'react-toastify';
 
@@ -119,7 +120,7 @@ useEffect(() => {
             const descuento = calculateDiscount(product.price, editedPrice);
             return total + (descuento > 0 ? (product.price - editedPrice) * product.quantity : 0);
         }, 0);
-        toast.success(`Total descuento aplicado en la venta: ${totalDescuento}`);
+        toast.info(`Total descuento aplicado en la venta: ${totalDescuento}`);
 
         // Calcular el total sin descuento (precio original)
         const totalSinDescuento = cartProducts.reduce((total, product) => {
@@ -151,10 +152,10 @@ useEffect(() => {
                 description: product.description,
                 ganancia: ganancia,
                 descuento,
-                descuentoPorcentaje
+                descuentoPorcentaje,
+                numero_venta
             };
         });
-
         // Calcular la cantidad total de productos
         const totalProducts = cartProducts.reduce((total, product) => total + product.quantity, 0);
         const totalCompra = cartProducts.reduce((total, product) => total + (product.quantity * (editedPrices[product.id] || product.price)), 0);
@@ -205,14 +206,26 @@ useEffect(() => {
 
 
   const handleVistaPrevia = async () => {
+
     try {
-        const cartData = cartProducts.map(product => ({
+      const numeroVentaResponse = await fetch('/api/latest-sale-number');
+        if (!numeroVentaResponse.ok) {
+            throw new Error('Error al obtener el número de venta');
+        }
+        const { numero_venta } = await numeroVentaResponse.json();
+      
+        const cartData = cartProducts.map(product => {
+        const editedPrice = editedPrices[product.id] || product.price;
+        return{
             id: product.id,
             name: product.name,
             quantity: product.quantity,
-            price: product.price,
-            description: product.description
-        }));
+            price: editedPrice,
+            description: product.description,
+            numero_venta
+        }    
+        });
+        
 
         // Obtener la cantidad de productos únicos usando un Set para los IDs
         const uniqueProductIds = new Set(cartProducts.map(product => product.id));
@@ -262,6 +275,7 @@ useEffect(() => {
 
     return new Blob(byteArrays, { type: contentType });
   };
+
   const calculateTotal1 = () => {
     if (!selectedProducts || !Array.isArray(selectedProducts)) {
       return 0;
@@ -469,10 +483,10 @@ useEffect(() => {
                             onChange={(e) => handleEditPrice(product.id, parseFloat(e.target.value) || product.price)} 
                             />
                         </td>
-                        <td>${product.price * product.quantity}</td>
+                        <td>${editedPrice * product.quantity}</td>
                         <td>
                           <div >
-                            <button onClick={() => handleRemove(product.id)} className='button-decrement' >Eliminar</button>
+                            <button onClick={() => handleRemove(product.id)} ><FaTrash /></button>
                         </div>
                         </td>
                         <td>{product.description}</td>

@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as XLSX from 'xlsx';
 import { FaEdit, FaFileDownload , FaBackward, FaPrint } from 'react-icons/fa';
+import axios from 'axios';
 import Header from './Header';
 import './ClienteList.css';
 import './SalesList.css';
 import { toast } from 'react-toastify';
 
 const SalesList = () => {
-
+  const [establecimiento, setEstablecimiento] = useState(null);
+  const [user, setUser] = useState(null);
   const [sales, setSales] = useState([]); // Guardará los productos
   const [currentPage, setCurrentPage] = useState(1); // Para la paginación
   const [itemsPerPage] = useState(10); // Productos por página
@@ -157,15 +159,64 @@ const SalesList = () => {
 
   // Manejar cambio de página
   const paginate = pageNumber => setCurrentPage(pageNumber);
-  const handlePrintSales = (sale) => {
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+        try {
+            const response = await axios.get('/api/users/:userId', { withCredentials: true });
+            setUser(response.data); // Guarda la información del usuario
+        } catch (err) {
+            setError('Error fetching user data');
+            console.error(err);
+        }
+    };
+
+    fetchUserInfo();
+}, []);
+
+useEffect(() => {
+  const fetchEstablecimientoInfo = async () => {
+    try {
+      const response = await axios.get('/api/users/establecimiento/:usuarioId', { withCredentials: true });
+      setEstablecimiento(response.data);
+    } catch (err) {
+      setError('Error fetching establecimiento data');
+      console.error(err);
+    }
+  };
+
+  fetchEstablecimientoInfo();
+}, []);
+ 
+const handlePrintSales = (sale, establecimiento, user) => {
+    // Crear un formato legible para los detalles de los productos
+    const saleItemsDetails = sale.items.map(item => `
+      ${item.name}
+      Cantidad: ${item.quantity}
+      Valor und: ${item.price}
+    `).join('----------------------');  // Unir todos los productos con saltos de línea
+
+    // Detalles generales de la venta, establecimiento y usuario
     const saleDetails = `
-      Venta ID: ${sale.numero_venta}\n
-      Producto: ${sale.items }\n
-      Cantidad: ${sale.total_products}\n
-      Precio: ${sale.items.price}\n
+      Establecimiento: 
+      ${establecimiento.name} (${establecimiento.company_type})
+      NIT: ${establecimiento.nit}
+      Representante Legal:
+      ${establecimiento.legal_representative}
+      ---------------------
+      Factura Electronica
+      de Venta
+      ---------------------
+      Fuiste atendido por: 
+      ${user.username}
+      Rol: ${user.rol}
+      ---------------------
+      Venta Numero: ${sale.numero_venta}
+      ${saleItemsDetails}
+    ----------------------
+      Total de productos: ${sale.total_products}
       Total: ${sale.valor_total_compra}
     `;
-  
+
     // Crear una ventana temporal para imprimir la venta
     const printWindow = window.open('', '', 'height=400,width=600');
     printWindow.document.write('<html><head><title>Imprimir Venta</title></head>');
@@ -174,11 +225,9 @@ const SalesList = () => {
     printWindow.document.write('</body></html>');
     printWindow.document.close();
     printWindow.print();
-  };
-  
- 
+};
 
-  return (
+return (
     <div className='container-productList'>
         <Header/>
         <div className="product-list">
@@ -242,7 +291,7 @@ const SalesList = () => {
                                 <button className='edit-button' onClick={() => handleEditSalesClick(sale)}>
                                     <FaEdit /> Editar
                                 </button>
-                                <button className='print-button' onClick={() => handlePrintSales(sale)}>
+                                <button className='print-button' onClick={() => handlePrintSales(sale, establecimiento, user)}>
                                     <FaPrint /> Imprimir
                                 </button>
                             </div>

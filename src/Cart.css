@@ -15,11 +15,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color:#2c3e50;
-    color: white;
+    color: rgb(17, 16, 16);
+    font-weight: bold; /* Más gruesas */
     padding: 5px;
     border-radius: 5px;
-  
+    border: 1px solid #000;  
   }
   
   .headerCarrito h3 {
@@ -53,11 +53,11 @@
     border: 1px solid #ddd;
     text-align: center;
   }
-  
+  /*
   .selected-products-table th {
     background-color: #4e6070;
     color: white;
-  }
+  }*/
   
   .selected-products-table tbody tr.even-row {
     background-color: #f2f2f2; /* Color claro para filas alternadas */
@@ -114,8 +114,7 @@
   .total-row td {
     font-weight: bold;
     font-size: 16px;
-    background-color: #2c3e50;
-    color: white;
+    color: rgb(17, 16, 16);
   }
   
   .form-input {

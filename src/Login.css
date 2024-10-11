@@ -30,7 +30,8 @@ body {
   }
   
   .left-section p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
   }
   
   /* Sección derecha */
@@ -117,4 +118,105 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    color: #007bff; /* Azul similar al de tu login */
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .login-subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+    animation-delay: 0.3s; /* Añade un pequeño retardo para que aparezca después del título */
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login-title {
+    font-size: 3rem;
+    color: #f5f7fa; /* Azul similar al de tu login */
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .login-subtitle {
+    font-size: 1.9rem;
+    color: #111111;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+    animation-delay: 0.3s; /* Añade un pequeño retardo para que aparezca después del título */
+  }
+  @keyframes typingEffect {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .typing-container {
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo máquina de escribir */
+    font-size: 2rem;
+    color: #f1f4f7; /* Azul similar al del login */
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .typing-container span {
+    opacity: 0;
+    animation: typingEffect 0.5s forwards;
+  }
+  
+  .typing-container span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .typing-container span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing-container span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  /* Agrega un delay para cada letra */
+  .typing-container span:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Sigue agregando para cada letra */
+  .typing-container span:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .typing-container span:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  
+ 
   

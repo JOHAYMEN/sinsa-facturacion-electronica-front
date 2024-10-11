@@ -41,8 +41,24 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="left-section">
-        <h1>Sinsa-Ecommerce</h1>
-        <p>Sinsa-Ecommerce te ayuda a solucionar tus problemas de inventarios.</p>
+      <div className="typing-container">
+        <span>S</span>
+        <span>i</span>
+        <span>n</span>
+        <span>s</span>
+        <span>a</span>
+        <span>-</span>
+        <span>E</span>
+        <span>c</span>
+        <span>o</span>
+        <span>m</span>
+        <span>m</span>
+        <span>e</span>
+        <span>r</span>
+        <span>c</span>
+        <span>e</span>
+      </div>
+      <p className="login-subtitle">Te ayuda a solucionar tus problemas de inventarios y facturación electrónica</p>
       </div>
       <div className="right-section">
         <form className="login-form" onSubmit={handleLogin}>
