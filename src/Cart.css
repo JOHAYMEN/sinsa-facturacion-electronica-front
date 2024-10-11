@@ -1,0 +1,192 @@
+.selected-products-container {
+    width: 85%;
+    background-color: #f9f9f9;
+    border-left: 2px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    max-height: 45%; /* Limita la altura máxima del contenedor */
+    overflow-y: auto; /* Permite el scroll vertical */
+    min-height: 100px; /* Asegura un tamaño mínimo aunque esté vacío */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+  .headerCarrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color:#2c3e50;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  
+  }
+  
+  .headerCarrito h3 {
+    margin: 0;
+  }
+  
+  .action-buttonCarrito {
+    padding: 10px 20px;
+    margin-right: 2px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-buttonCarrito:hover {
+    background-color: #218838;
+  }
+  
+  .selected-products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .selected-products-table th, 
+  .selected-products-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .selected-products-table th {
+    background-color: #4e6070;
+    color: white;
+  }
+  
+  .selected-products-table tbody tr.even-row {
+    background-color: #f2f2f2; /* Color claro para filas alternadas */
+  }
+  
+  .selected-products-table tbody tr.odd-row {
+    background-color: #e6e6e6; /* Color más oscuro para filas alternadas */
+  }
+  
+  .selected-products-table tbody tr:hover {
+    background-color: #ddd; /* Efecto hover en las filas */
+  }
+  
+  .quantity-container {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente */
+}
+.button-decrement{
+  background-color: red; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin: 0 5px; /* Espaciado lateral */
+  transition: background-color 0.2s; /* Transición para el hover */
+}
+.quantity-button {
+    background-color: #2c3e50;; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin: 0 5px; /* Espaciado lateral */
+    transition: background-color 0.2s; /* Transición para el hover */
+}
+
+.quantity-button.increment:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse */
+}
+
+.quantity-button.decrement:hover {
+  background-color:red; /* Color de fondo al pasar el mouse */
+}
+
+.quantity-display {
+    margin: 0 10px; /* Espacio entre los botones y la cantidad */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+  
+
+  .total-row td {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .button-form-factura {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-button, 
+  .button-close-factura {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button-close-factura:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .modal-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  

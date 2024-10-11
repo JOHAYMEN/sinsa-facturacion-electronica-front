@@ -1,0 +1,78 @@
+.modal-content {
+    padding: 20px; /* Espaciado interno del modal */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+label {
+    margin: 10px 0; /* Margen vertical entre los labels */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: #0e0d0d; /* Color del texto */
+    position: relative; /* Necesario para el posicionamiento absoluto */
+}
+
+.form-input {
+    width: 85%; /* Ancho completo para el input */
+    padding: 8px; /* Espaciado interno en el input */
+    border: 1px solid #413c3c; /* Borde ligero */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.label-above {
+    display: block; /* Se muestra como un bloque */
+    position: absolute; /* Posicionamiento absoluto */
+    top: -30px; /* Mueve el label hacia arriba */
+    left: 10px; /* Mueve el label hacia la izquierda */
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    color: #3d3c3c; /* Color del texto más claro */
+    background-color: #fff; /* Fondo blanco para que el texto no se mezcle con el input */
+    padding: 0 5px; /* Espaciado horizontal */
+    transition: 0.2s ease-in-out; /* Transición suave */
+}
+
+/* Estilo adicional para el input enfocado */
+.form-input:focus + .label-above {
+    top: -15px; /* Mueve el label más arriba al enfocar */
+    font-size: 0.75rem; /* Reduce el tamaño de fuente al enfocar */
+    color: #007bff; /* Cambia el color del label al enfocar */
+}
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-right: 5px;
+  }
+  
+  .download-button svg {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .download-button:active {
+    background-color: #004085;
+  }
+  
+  .download-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  

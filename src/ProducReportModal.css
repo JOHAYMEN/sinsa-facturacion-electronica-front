@@ -1,0 +1,89 @@
+/* Estilo para el título del reporte */
+.product-report-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Estilo para el texto de carga y error */
+  .loading-text {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-align: center;
+  }
+  
+  .error-text {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    text-align: center;
+  }
+  
+  /* Contenedor del contenido del reporte */
+  .report-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  /* Estilos para la información del producto más y menos vendido */
+  .max-sold-product, .min-sold-product {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 45%;
+  }
+  
+  .product-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-info {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Grupo de botones */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  /* Botón de cerrar */
+  .btn-close {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-close:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Animación para la aparición de los elementos */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

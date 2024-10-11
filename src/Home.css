@@ -1,0 +1,32 @@
+.app-container {
+    display: flex;
+    width: 100%;
+    top: 0px; /* Ajusta según la altura de tu header */
+    position: relative;
+    height: calc(100vh - 120px); /* Ajusta el contenedor principal para que ocupe la altura de la pantalla menos el header y el carrito */
+}
+
+.filter-section {
+    flex: 0 0 15%;
+}
+
+.productos-container {
+    flex: 1 1 85%;
+    overflow-y: 100%; /* Habilita el desplazamiento solo en el área de productos */
+    margin-top: 90px; /* Espacio desde el header */
+    height: auto;
+    padding: 5px; /* Espaciado interno opcional */
+    max-height: unset; /* Limita la altura de la sección de productos para que el carrito esté visible */
+}
+
+.productos-scroll {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los productos se alineen en varias filas */
+    gap: 5px; /* Espacio entre los ProductCards */
+    overflow-y: 100%; /* Asegura que haya scroll solo en la sección de productos */
+    max-height: 100%; /* El scroll se habilitará dentro de esta área */
+    flex-grow: 1;
+    max-height: unset;
+}
+
+  

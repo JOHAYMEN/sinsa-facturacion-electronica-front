@@ -1,0 +1,118 @@
+.product-card {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 220px; /* Ancho ajustado para tarjetas más pequeñas */
+    padding: 5px; /* Espaciado interno */
+    margin: 3px; /* Margen entre las tarjetas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    display: flex; /* Para organizar el contenido verticalmente */
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    position: relative;
+}
+
+.image-container {
+    width: 100px; /* Ancho pequeño para la imagen */
+    height: 100px; /* Altura pequeña para la imagen */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+    margin-bottom: 10px; /* Espaciado entre la imagen y el contenido */
+    position: relative; /* Para posicionar elementos absolutos */
+}
+
+.image {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* Imagen ocupa toda la altura del contenedor */
+    object-fit: cover; /* Mantiene la relación de aspecto, recortando si es necesario */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+
+.favorite-icon.active {
+    color: #ff0000; /* Cambia color cuando es favorito */
+}
+
+.name {
+    font-size: 1rem; /* Tamaño de fuente del nombre */
+    margin: 5px 0; /* Margen alrededor del nombre */
+    text-align: center; /* Centra el nombre */
+    color: #333; /* Color del texto */
+}
+
+.quantity-section, .price-section {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center;
+    margin: 5px 0; /* Espaciado vertical */
+}
+
+.quantity-input, .custom-price-input {
+    width: 100px; /* Ancho fijo para los inputs */
+    text-align: center; /* Centra el texto en los inputs */
+}
+
+.header-button {
+    width: 100%; /* Ancho completo del botón */
+    background-color: #28a745; /* Color verde */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Margen superior para separar del contenido */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Animación de fondo */
+}
+
+.header-button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+   
+
+.product-card:hover {
+    transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+}
+
+.favorite-icon {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem; /* Tamaño del ícono */
+    color: #2b240a; /* Color dorado */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.favorite-icon.active {
+    color: #ff0000; /* Cambia color cuando es favorito */
+}
+
+.price {
+    font-size: 1.5rem; /* Tamaño de fuente del precio */
+    color: #007bff; /* Color azul */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.header-button {
+    width: 100%; /* Ancho completo del botón */
+    background-color: #28a745; /* Color verde */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Animación de fondo */
+}
+
+.header-button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+.quantity-input {
+    width: 50px; /* Ancho fijo para el input de cantidad */
+    border-radius: 4px; /* Esquinas redondeadas */
+    border: 1px solid #ccc; /* Borde ligero */
+    padding: 5px; /* Espaciado interno */
+}
+
+
+
+

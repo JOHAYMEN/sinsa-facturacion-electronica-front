@@ -1,0 +1,59 @@
+.product-list-scroll-sales {
+    display: flex; /* Flexbox para alinear las tarjetas de producto horizontalmente */
+    flex-direction: row; /* Alinea los productos en una fila */
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    white-space: nowrap; /* Previene el salto de línea de las tarjetas de producto */
+    padding: 10px;
+    gap: 15px; /* Espacio entre las tarjetas de producto */
+  }
+  
+  .product-edit {
+    display: flex;
+    flex-direction: column; /* Hace que los detalles del producto se dispongan en forma vertical */
+    min-width: 250px; /* Ancho mínimo de cada tarjeta */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .form-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .button-remove-product {
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .button-add-product {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  

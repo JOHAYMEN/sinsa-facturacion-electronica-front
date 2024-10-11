@@ -1,0 +1,92 @@
+/* Estilos generales */
+.mesas-container,
+.pedidos-container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* Estilos de las mesas */
+.mesa {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+}
+
+.mesa-libre {
+  background-color: #4caf50; /* Verde */
+}
+
+.mesa-ocupada {
+  background-color: #f44336; /* Rojo */
+}
+
+.mesa-reservada {
+  background-color: #ff9800; /* Amarillo */
+}
+
+/* Estilos de botones */
+.btn-reservar {
+  background-color: #ffeb3b; /* Amarillo */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-cancelar {
+  background-color: #f44336; /* Rojo */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-agregar {
+  background-color: #2196f3; /* Azul */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-eliminar {
+  background-color: #f44336; /* Rojo */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-guardar {
+  background-color: #4caf50; /* Verde */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+/* Estilos de inputs */
+.time-input,
+.search-input,
+.cantidad-input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.time-input {
+  color: #000; /* Color del texto en el input de tiempo */
+}
+.divider {
+    width: 2px; /* Grosor de la división */
+    background-color: #ccc; /* Color de la división */
+    margin: 0 20px; /* Espaciado horizontal */
+}

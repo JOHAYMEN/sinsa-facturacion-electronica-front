@@ -1,0 +1,246 @@
+.titulo-filtro-con-favoritos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favoritos-boton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icono-favorito {
+  color: gold; /* Cambia el color de la estrella si lo deseas */
+  font-size: 1.5rem;
+}
+/* Asegúrate de que el contenedor principal tenga un ancho definido */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente (opcional) */
+  text-align: center; /* Alinea el texto al centro */
+  width: 100%; /* Ajusta el ancho según sea necesario */
+}
+
+/* Estilo para el nombre */
+.name {
+  margin: 0; /* Elimina el margen por defecto del h4 */
+  font-size: 1.2rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-weight: bold; /* Opcional: hace que el texto sea negrita */
+}
+
+/* Estilo opcional para la sección del precio */
+.price-section {
+  margin-top: 8px; /* Ajusta el margen superior según sea necesario */
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px; /* Ajusta según sea necesario */
+  right: 10px; /* Ajusta según sea necesario */
+  color: grey; /* Color por defecto */
+  cursor: pointer;
+  font-size: 24px; /* Ajusta el tamaño si es necesario */
+}
+
+.favorite-icon.active {
+  color: gold; /* Color cuando está activo */
+}
+/* Contenedor principal del carrito */
+.selected-products-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+/* Sección fija con el título y los botones */
+.headerCarrito {
+  position: sticky; /* Fija el elemento en su contenedor */
+  top: 0; /* La posición desde el borde superior del contenedor */
+  background-color: white; /* Asegura que el fondo sea blanco */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  padding: 10px; /* Ajusta el relleno alrededor del título y los botones */
+  border-bottom: 1px solid #ddd; /* Añade una línea inferior para definir la sección */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Contenedor de la tabla de productos seleccionados */
+.products-table-container {
+  overflow-y: auto; /* Añade un scrollbar si la tabla es demasiado larga */
+  max-height: calc(100vh - 120px); /* Ajusta la altura máxima del contenedor de productos */
+  padding: 10px; /* Añade un poco de relleno para que el contenido no esté pegado a los bordes */
+}
+
+/* Ajuste opcional para la tabla */
+.selected-products-table {
+  width: 100%; /* Asegura que la tabla ocupe el ancho completo */
+}
+.product-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio vertical entre los elementos, ajusta si es necesario */
+}
+
+.product-card .name {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card .quantity-section {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card .quantity-input {
+  width: 60px; /* Ajusta el ancho del input de cantidad */
+  margin-left: 5px;
+  padding: 2px;
+}
+
+.product-card .price-section {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card .price {
+  margin-left: 10px; /* Ajusta este valor si es necesario */
+  cursor: pointer;
+}
+
+.product-card .header-button {
+  margin-top: 10px; /* Ajusta el espacio entre el botón y los demás elementos */
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px; /* Ajusta el ancho según sea necesario */
+}
+
+.image-container {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content {
+  width: 100%;
+}
+
+.price-section {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Ajusta la altura según sea necesario */
+}
+
+.custom-price-input {
+  width: 80px; /* Ajusta el ancho según sea necesario */
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.quantity-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.quantity-button {
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+

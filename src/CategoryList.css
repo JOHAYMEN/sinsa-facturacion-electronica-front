@@ -1,0 +1,17 @@
+.edit-button,
+.habilitado-button,
+.inhabilitado-button {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px; /* Asegurar el mismo ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Define un ancho consistente para ambos botones */
+    padding: 10px 15px; /* Ajusta el padding según prefieras */
+    font-size: 16px;
+    
+}

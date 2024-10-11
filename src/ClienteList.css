@@ -1,0 +1,250 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Color de fondo suave */
+}
+
+/* Encabezado */
+.headerProductList {
+    margin-top: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.iconRegresarProducts {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.Buttons-new-search {
+    display: flex;
+    align-items: center;
+}
+
+.new-button {
+    background-color: #4caf50; /* Verde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Define un ancho consistente para ambos botones */
+    padding: 10px 15px; /* Ajusta el padding según prefieras */
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.new-button:hover {
+    background-color: #45a049; /* Verde más oscuro en hover */
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    color:#ccc;
+}
+
+/* Tabla de clientes */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Separador entre filas */
+}
+
+.product-table th {
+    background-color: #885d5d52; /* Fondo de encabezado */
+    font-weight: bold;
+}
+.button-group {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+.edit-button,
+.habilitado-button,
+.inhabilitado-button {
+    border: none;
+    border-radius: 5px;
+    padding: 12px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px; /* Asegurar el mismo ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Define un ancho consistente para ambos botones */
+    padding: 10px 15px; /* Ajusta el padding según prefieras */
+    font-size: 16px;
+    
+}
+.edit-button {
+    background-color: #2196F3; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0px 30px;
+}
+
+
+.habilitado-button {
+    background-color: #4caf50; /* Verde */
+    color: white;
+}
+
+.inhabilitado-button {
+    background-color: #f44336; /* Rojo */
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #1976D2; /* Azul más oscuro */
+}
+
+.habilitado-button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+.inhabilitado-button:hover {
+    background-color: #d32f2f; /* Rojo más oscuro */
+}
+
+/* Estilos de paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3; /* Azul */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #1976D2; /* Azul más oscuro */
+}
+
+/* Estilos de los modales */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para el modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.button-close,
+.button-close-factura {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-close:hover,
+.button-close-factura:hover {
+    background-color: #d32f2f; /* Rojo más oscuro */
+}
+
+/* Estilos de los formularios dentro del modal */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #8a0b0b;
+    border-radius: 5px;
+}
+
+.form-button {
+    background-color: #2196F3; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #1976D2; /* Azul más oscuro */
+}
+
+/* Estilos de respuesta de éxito y error */
+.modal-content.success {
+    border: 2px solid #4caf50; /* Verde */
+}
+
+.modal-content.error {
+    border: 2px solid #f44336; /* Rojo */
+}
+.print-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .print-button svg {
+    margin-right: 8px;
+  }
+  
+  .print-button:hover {
+    background-color: #218838;
+  }
+  
